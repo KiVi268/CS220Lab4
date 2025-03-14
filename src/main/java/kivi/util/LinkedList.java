@@ -5,7 +5,7 @@ import kivi.Node;
 import java.util.Scanner;
 
 public class LinkedList {
-    private Node head;
+    public Node head;
 
     public void dynamicBuild() {
         Scanner scanner = new Scanner(System.in);
@@ -43,18 +43,28 @@ public class LinkedList {
     }
 
     public void deleteList(int value) {
-        if (head == null) return;
+        if (head == null) {
+            System.out.println("List is empty.");
+            return;
+        }
 
         if (head.getData() == value) {
             head = head.getNext();
             return;
         }
+
         Node current = head;
-        while (current.getNext() != null && current.getNext().getData() != value) {
+        while (current.getNext() != null) {
+            if (current.getNext().getData() == value) {
+                current.setNext(current.getNext().getNext());
+                return;
+            }
             current = current.getNext();
         }
-        current.setNext(current.getNext().getNext());
+
+        System.out.println("Value not found.");
     }
+
 
     public int getPositionOfElement(int value) {
         Node current = head;

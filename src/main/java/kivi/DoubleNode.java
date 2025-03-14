@@ -4,7 +4,7 @@ public class DoubleNode {
     private int data;
     DoubleNode next, previous;
 
-    public DoubleNode(int data) {
+    public DoubleNode() {
         this.data = data;
         this.next = this.previous = null;
     }

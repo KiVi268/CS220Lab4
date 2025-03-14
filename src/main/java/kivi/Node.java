@@ -1,14 +1,16 @@
 package kivi;
 
-public class Node {
+public class Node extends DoubleNode {
     public Node prev;
     private int data;
     private Node next;
 
     public Node(int value) {
+        super();
     }
 
     public Node(int data, Node next) {
+        super();
         this.data = data;
         this.next = next;
     }
