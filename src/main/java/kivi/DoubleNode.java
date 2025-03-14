@@ -1,8 +1,8 @@
 package kivi;
 
 public class DoubleNode {
-     private int data;
-     DoubleNode next, previous;
+    private int data;
+    DoubleNode next, previous;
 
     public DoubleNode(int data) {
         this.data = data;

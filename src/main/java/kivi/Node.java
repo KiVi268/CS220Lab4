@@ -2,8 +2,8 @@ package kivi;
 
 public class Node {
     public Node prev;
-    private  int data;
-    private  Node next;
+    private int data;
+    private Node next;
 
     public Node(int value) {
     }
