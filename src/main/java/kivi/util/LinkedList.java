@@ -69,6 +69,22 @@ public class LinkedList {
         return -1;
     }
 
+    public void concatenateLists(LinkedList other) {
+        if (head == null) {
+            head = other.head;
+            return;
+        }
+
+        Node current = head;
+        while (current.getNext() != null) {
+            current = current.getNext();
+        }
+        current.setNext(other.head);
+    }
+
+
+
+
     @Override
     public String toString() {
         return "LinkedList{" +
